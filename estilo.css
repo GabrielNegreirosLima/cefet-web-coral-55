@@ -53,7 +53,7 @@ strong {
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-  height: 100vh;
+  height: 100v;
   display: grid;
 
   /*154px para a sidebar, header, main e footer tem o restante*/
@@ -126,15 +126,25 @@ article {
   display: flex;
   justify-content: space-between;
   line-height: 2em;
+  display: flex;
 }
 
 
 /* EXERCÍCIO 5: o rodapé */
 #rodape-pagina {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: 46px;
+  margin-right: 25px;
 }
+
 
 /* EXERCÍCIO 6: lateral */
 #lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
