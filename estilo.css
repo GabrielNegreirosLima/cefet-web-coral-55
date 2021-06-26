@@ -149,10 +149,19 @@ article {
 
 
 /* EXERCÍCIO 7: o ticket */
+:root {
+  --ticket-size: 84px;
+}
+
 #ticket {
+  position: fixed;
+  top: calc(50% - var(--ticket-size)/2);
+  left: -89px;
+  transition: left 200ms ease-out
 }
 
 #ticket:hover {
+  left: 0;
 }
 
 
