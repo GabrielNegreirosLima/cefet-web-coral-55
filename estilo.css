@@ -67,7 +67,7 @@ strong {
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-  height: 100v;
+  height: 100vh;
   display: grid;
 
   /*154px para a sidebar, header, main e footer tem o restante*/
