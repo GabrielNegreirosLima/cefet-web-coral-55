@@ -3,12 +3,26 @@
 @import "fonts/ravie.css";
 @import "fonts/verdana.css";
 
+:root {
+  --ticket-size: 84px;
+  --body-background: #fff;
+  --strong-color: #d027aa;
+  --background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
+  --recipiente-border: 1px solid #d3d3d3;
+  --cardapio-background: rgba(255, 255, 255, 0.2);
+  --cardapio-border: 1px solid #aac0ae;
+  --cardapio-font: #333;
+  --cardapio-h3: #333333;
+  --cabecalho-h1: #e90c0c;
+  --cabecalho-h2: #333;
+}
+
 html {
   height: 100vh;
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--body-background);
   font-family: "Verdana", sans-serif;
   height: 100vh;
   margin-top: 0px;
@@ -20,31 +34,31 @@ h1 {
 }
 
 strong {
-  color: #d027aa;
+  color: var(--strong-color);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: var(--background-image);
+  border-left: var(--recipiente-border);
+  border-right: var(--recipiente-border);
 }
 
 #cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  background-color: var(--cardapio-background);
+  border-top: var(--cardapio-border);
+  border-bottom: var(--cardapio-border);
+  border-left: var(--cardapio-border);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--cardapio-font);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--cardapio-font);
 }
 
 
@@ -97,7 +111,7 @@ strong {
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--cabecalho-h1);
   font-weight: normal;
   text-align: center;
 }
@@ -105,7 +119,7 @@ strong {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--cabecalho-h2);
   font-weight: normal;
   text-align: end;
 }
@@ -118,7 +132,7 @@ strong {
 
 #cardapio > h3 {
   font-size: 18px;
-  color: #333333;
+  color: var(--cardapio-h3);
   font-family: "Verdana", "Open Sans", sans-serif;
 }
 
@@ -149,10 +163,6 @@ article {
 
 
 /* EXERCÍCIO 7: o ticket */
-:root {
-  --ticket-size: 84px;
-}
-
 #ticket {
   position: fixed;
   top: calc(50% - var(--ticket-size)/2);
@@ -187,3 +197,17 @@ article {
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
 
+   @media (prefers-color-scheme: dark) {
+    :root {
+      --body-background: #01241b;
+      --background-image: linear-gradient(to bottom, #312b0d, #458fa5 80%);
+      --recipiente-border: 1px solid #0c1c46;
+      --cardapio-background: rgba(41, 32, 32, 0.2);
+      --cardapio-border: 1px solid #110837;
+      --cardapio-font: #eee;
+      --cardapio-h3: #eeeeee;
+      --cabecalho-h1: #ff0000;
+      --cabecalho-h2: #eee;
+      --cardapio-font: #eee;
+    }
+  }
