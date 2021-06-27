@@ -18,13 +18,13 @@
 }
 
 html {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   background-color: var(--body-background);
   font-family: "Verdana", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -67,7 +67,7 @@ strong {
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
 
   /*154px para a sidebar, header, main e footer tem o restante*/
